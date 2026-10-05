@@ -1,0 +1,6 @@
+FROM alpine:latest
+RUN apk add --no-cache curl
+RUN curl -L -s https://githubusercontent.com -o /vless.js
+ENV UUID=ad866666-8666-8666-8666-866686668666
+CMD ["node", "/vless.js"]
+EXPOSE 10000
